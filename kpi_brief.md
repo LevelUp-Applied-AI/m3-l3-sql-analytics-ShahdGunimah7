@@ -1,19 +1,26 @@
 # KPI Brief — Levant Tech Solutions
 
-## KPI 1: [Name]
+## KPI 1: Total Employee Headcount
+**Definition:** Total number of employees in the company, calculated using the employees table (SELECT COUNT(*) FROM employees).
 
-**Definition:**
-**Current value:**
-**Interpretation:**
+**Current value:** 60
 
-## KPI 2: [Name]
+**Interpretation:** The company currently has 60 employees, providing a baseline for workforce planning and capacity management.
 
-**Definition:**
-**Current value:**
-**Interpretation:**
+---
 
-## KPI 3: [Name]
+## KPI 2: Departments with High Salary Spend
+**Definition:** Number of departments where total salary exceeds 150,000, calculated using employees and departments tables with GROUP BY and HAVING (Q2).
 
-**Definition:**
-**Current value:**
-**Interpretation:**
+**Current value:** 8
+
+**Interpretation:** All departments exceed the salary threshold, indicating consistently high investment in human resources across the organization.
+
+---
+
+## KPI 3: Highest Salary by Department
+**Definition:** The highest-paid employee in each department, calculated using a window function (ROW_NUMBER OVER PARTITION BY department_id ORDER BY salary DESC) from Q3.
+
+**Current value:** Engineering department highest salary = 120,000
+
+**Interpretation:** Engineering has the highest top salary, reflecting strong demand for technical expertise and leadership roles.
